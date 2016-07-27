@@ -7,9 +7,9 @@
 ### Добавление скрипта
   Для начала необходимо подключить на страницу основной скрипт в head:
   
-    ```
-    <script src="//f.sravni.ru/f/apps/build/widgets/sravni-widgets.js"></script>
-    ```
+  ```
+  <script src="//f.sravni.ru/f/apps/build/widgets/sravni-widgets.js"></script>
+  ```
   Скрипт является общим для всех типов виджетов и должен быть подключен в одном экземпляре.
   
 ## <a name='widgets'>Виджеты</a>
