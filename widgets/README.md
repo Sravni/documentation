@@ -81,6 +81,6 @@
   *Приимечание* 
     Если внутри тега iframe не умещаются календари (для туристического микровиджета), убрать их можно установкой атрибута field-datepicker="false", например:
 
-      ```
-      <sravni-micro-widget type="mantravel" logo="true" partner="partner.id" field-datepicker="false"></sravni-micro-widget>
-      ```
+    ```
+    <sravni-micro-widget type="mantravel" logo="true" partner="partner.id" field-datepicker="false"></sravni-micro-widget>
+    ```
