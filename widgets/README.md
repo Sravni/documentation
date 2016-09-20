@@ -69,3 +69,16 @@
   ```
   <script>document.write('<sravni-micro-widget type="mantravel"></sravni-micro-widget>')</script>
   ```
+### Ваш сайт использует старые библиотеки (например mootools версии 1.2) и *микровиджет* не отображается. 
+  1. Создайте статичную html страницу на вашем сайте и сделайте её доступной по прямой ссылке (sitename.ru/microwidget.html). Статичная страница должна включать только базовую разметку (html, head, body, meta).
+  2. Разместите виджет на статичной странице согласно документации.
+  3. Установите тег
+      ```
+      <iframe frameborder="0" src="ссылка/на/статичную/страницу.html" style="width:700px; height: 400px;"></iframe>
+      ```
+  4. Укажите ссылку на ващу страницу в атрибут src и установите необходимую ширину и высоту
+  *Приимечание* 
+  Если внутри тега iframe не умещаются календари (для туристического микровиджета), убрать их можно установкой атрибута field-datepicker="false", например:
+      ```
+      <sravni-micro-widget type="mantravel" logo="true" partner="partner.id" field-datepicker="false"></sravni-micro-widget>
+      ```
