@@ -22,16 +22,133 @@
     ```
     <sravni-widget partner="partner.id"></sravni-widget>
     ```
-    Допустимые параметры:
-      - type - тип виджета. Доступные значения: credits, kasko, osago. По умолчанию вставляется двойной виджет автострахования, где первым отображается виджет Каско.
-      - logo - отображение логотипа Сравни.ру. По умолчнию отображается. Для отключения нужно установить logo="false".
-      - first - имя вкладки виджета, которая должна отобразиться первой при загрузке (только для виджета автострахования). Доступные значения: kasko, osago. По умолчанию активна вкладка с виджетом Каско
-      - partner - атрибут для указания идентификатора партнёра. Необходим для фиксации переходов и расчётов с виджета в личном кабинете на [partner.sravni.ru](//partner.sravni.ru/partner/main). При отсутствии атрибута будет взято имя хоста. Например, если партнёр выкладывает виджет на внутренней странице сайта bestsite.com/news/16/07/freshnews и не указывает атрибут partner, то проверяться на предмет наличия партнёрства будет bestsite.com
-      - server - сервисная переменная для указания сервера подгружаемого файла виджета. При встраивании партнёром не указывается
-      - width - ширина виджета. Может задаваться в %, либо абсолютным значением. Опциональный, по умолчанию 100% ширины контейнера
-      - responsive - для явного задания мобильности виджета. Опциональный. По умолчанию задает viewport, если на странице отсутствует
-      - theme - тема оформления виджета
-      - hide-partners - атрибут, отключающий блок партнёров под виджетом. Атрибут достаточно добавить в код виджета не присваивая никакого значения
+    Допустимые параметры:      
+<table cellspacing=0 border=1>
+					<tr>
+						<th style="min-width:50px; text-align: center"50px>Параметры / Сервис</th>
+						<th style="min-width:50px; text-align: center"50px>Автострахование</th>
+						<th style="min-width:50px; text-align: center"50px>Подбор кредита</th>
+						<th style="min-width:50px; text-align: center"50px>Страхование путешествий (Beta)</th>
+						<th style="min-width:50px; text-align: center"50px>Описание</th>
+					</tr>
+					<tr>
+						<td style="min-width:50px" colspan=5><b>Основные</b></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>type</td>
+						<td style="min-width:50px; text-align: center"50px>kasko/osago</td>
+						<td style="min-width:50px; text-align: center"50px>credits</td>
+						<td style="min-width:50px; text-align: center"50px>mantravel</td>
+						<td style="min-width:50px">Тип виджета (если атрибут не указан, устанавливается двойной виджет автострахования, где первым отображается каско)</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>logo </td>
+						<td style="min-width:50px; text-align: center"50px>true/false</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">Отображение логотипа Сравни.ру. По умолчнию отображается. Для отключения нужно установить logo="false".</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>first</td>
+						<td style="min-width:50px; text-align: center"50px>kasko/osago</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">Первая вкладка для двойного виджета</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>partner</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">Атрибут для указания идентификатора партнёра. Необходим для фиксации переходов и расчётов с виджета в личном кабинете на partner.sravni.ru. При отсутствии атрибута будет взято имя хоста. Например, если партнёр выкладывает виджет на внутренней странице сайта bestsite.com/news/16/07/freshnews и не указывает атрибут partner, то проверяться на предмет наличия партнёрства будет bestsite.com</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>width</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">ширина виджета. Может задаваться в %, либо абсолютным значением. Опциональный, по умолчанию 100% ширины контейнера</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px" colspan=5 ><b>Дополнительные</b></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>responsive</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">Адаптивный виджет. Опциональный. Задает нужный тег viewport, если на странице он отсутствует</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>theme</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">Тема оформления виджета. Принимает текстовое значение и применяет стили соответствующей темы</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>hide-partners</td>
+						<td style="min-width:50px; text-align: center"50px>true/false</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">Правило отображения блока со страховыми партнёрами</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>order-by</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">имя_страховой_компании</td>
+						<td style="min-width:50px">Атрибут для отображения предложений указаной страховой в начале списка с лейблом "рекомендовано". Страховая указывается при помощи алиаса (например, reso)</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>query</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px">строка_запроса</td>
+						<td style="min-width:50px">Строка запроса к виджету передаёт параметры по умолчанию для загрузки виджета с заранее установленными параметрами</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>self-payment</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>-</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">Параметр для реализации оплаты полиса на стороне партнёра (требует доработок на сайте партнёра). Предоставляет api для получения данных об оплате. Для осуществления данной возможности свяжитесь с нами.</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px" colspan=5><b>Трекинг</b></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>data-pixel-lead</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">Если вы используете сбор статистики при помощи пикселей или переменную sub_id в UTM метках на своём сайте, вы можете указать их в значениях этих атрибутов. Пиксели будут регистрироваться каждый раз, когда происходит соответствующее событие в виджете. Атрибут sub_id регистрируется при выполнении заказа</td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>data-pixel-engage</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px"></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>sub</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px"></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px" colspan=5><b>Сервисные</b></td>
+					</tr>
+					<tr>
+						<td style="min-width:50px; text-align: center"50px>server</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px; text-align: center"50px>+</td>
+						<td style="min-width:50px">Сервисная переменная для указания сервера подгружаемого файла виджета. При встраивании партнёром не указывается</td>
+					</tr>
+				</table>     
   3. Задать ширину виджета можно, обернув его в контейнер необходимой ширины, либо указать параметр при подключении:
    
     ```
